@@ -1,0 +1,10 @@
+.dashboard_container {
+  background-color: #C9CADF;
+  height: 100vh;
+}
+
+.dashboard_container .dashboard_title {
+  margin-top: 0px;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=Dashboard.css.map */

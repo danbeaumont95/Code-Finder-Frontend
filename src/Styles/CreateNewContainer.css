@@ -1,0 +1,18 @@
+.save_new_code_snippet_button {
+  margin-top: 20px;
+  border: 2px solid #C9CADF;
+  background-color: #0E6EAF;
+  height: 40px;
+  width: 140px;
+  border-radius: 8px;
+  font-size: large;
+  cursor: pointer;
+  float: right;
+}
+
+.save_new_code_snippet_button:hover {
+  background-color: #062659;
+  color: #C9CADF;
+  border: 2px solid #0E6EAF;
+}
+/*# sourceMappingURL=CreateNewContainer.css.map */

@@ -1,0 +1,97 @@
+.navbar_menu {
+  background-color: #0E6EAF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #C9CADF;
+}
+
+.navbar_menu div {
+  color: #C9CADF;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar_div {
+  color: #C9CADF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.navbar_div a {
+  color: #C9CADF;
+}
+
+.navbar_div .navbar_search {
+  border: 2px solid #C9CADF;
+}
+
+.navbar_item {
+  margin: 10px;
+}
+
+.navbar_item_search {
+  margin: 10px;
+}
+
+.box {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  width: 80px;
+  height: 50px;
+  background: none;
+  border: 4px solid #C9CADF;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 26px;
+  color: #C9CADF;
+  outline: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.box:hover input {
+  width: 350px;
+  background: #0E6EAF;
+  border-radius: 10px;
+}
+
+.box i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: #C9CADF;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.box:hover i {
+  cursor: pointer;
+  top: 30%;
+}
+
+.navbar_select_dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=NavBar.css.map */

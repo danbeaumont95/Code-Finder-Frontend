@@ -1,0 +1,94 @@
+.code_snippet_create_new {
+  border-radius: 12px;
+  background-color: #0E6EAF;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  color: #C9CADF;
+  margin-top: 20px;
+}
+
+.code_snippet_create_new:hover {
+  cursor: pointer;
+}
+
+.code_container_code_snippets_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.code_container_code_snippets_container .code_snippet_container {
+  width: 400px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  background-color: #282c34;
+  color: #C9CADF;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.code_container_code_snippets_container .code_snippet_container .code_snippet_title_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #0E6EAF;
+  position: relative;
+}
+
+.code_container_code_snippets_container .code_snippet_container .code_snippet_title_container .code_snippet_language_icon {
+  float: left;
+  position: absolute;
+  left: 0;
+  padding-left: 10px;
+  border-radius: 12px;
+}
+
+.code_container_code_snippets_container .code_snippet_container .code_snippet_title_container .code_snippet_title {
+  border-radius: 12px;
+  background-color: #0E6EAF;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+
+.code_container_code_snippets_container .code_snippet_container .login_here_button {
+  margin-top: 20px;
+  border: 2px solid #C9CADF;
+  background-color: #0E6EAF;
+  height: 40px;
+  width: 140px;
+  border-radius: 8px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.code_container_code_snippets_container .code_snippet_container .login_here_button:hover {
+  background-color: #062659;
+  color: #C9CADF;
+  border: 2px solid #0E6EAF;
+}
+
+.code_container_code_snippets_container .code_snippet_container .code_snippet_button_container {
+  border-top: 2px solid #0E6EAF;
+  position: relative;
+}
+/*# sourceMappingURL=CodeContainer.css.map */

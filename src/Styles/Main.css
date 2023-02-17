@@ -1,0 +1,85 @@
+.testing {
+  background-image: url("../Assets/Images/signup-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.main {
+  height: 100vh;
+  font-family: initial;
+  background: url("../Assets/Images/ai_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #C9CADF;
+}
+
+.main .main_container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px 0px 0px 10px;
+  height: 100%;
+  float: left;
+  width: 50%;
+  position: relative;
+  background-color: #001f39;
+  color: #C9CADF;
+}
+
+.main .main_container .main_container_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main_container .main_container_form .login_signup_input {
+  background-color: #C9CADF;
+  width: 400px;
+  height: 60px;
+  color: #101221;
+  font-size: large;
+  margin-bottom: 2px;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #1BB4F4;
+}
+
+.main .main_container .main_container_form .form_button {
+  margin-top: 20px;
+  border: 2px solid #C9CADF;
+  background-color: #0E6EAF;
+  height: 40px;
+  width: 140px;
+  border-radius: 8px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.main .main_container .main_container_form .form_button:hover {
+  background-color: #062659;
+  color: #C9CADF;
+  border: 2px solid #0E6EAF;
+}
+
+.main .main_container .main_container_form .switch_type_section .login_here_button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: #C9CADF;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: medium;
+}
+/*# sourceMappingURL=Main.css.map */
