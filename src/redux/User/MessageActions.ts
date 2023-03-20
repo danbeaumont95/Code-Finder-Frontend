@@ -1,4 +1,4 @@
-import { SET_MESSAGE, CLEAR_MESSAGE, GET_MESSAGE } from "./UserTypes";
+import { SET_MESSAGE, CLEAR_MESSAGE, GET_MESSAGE } from './UserTypes';
 
 export const setMessage = (message: any) => ({
   type: SET_MESSAGE,
@@ -9,9 +9,7 @@ export const getMessage = (message: any) => ({
   payload: message,
 });
 
-export const clearMessage: any = (placeholder: string) => (dispatch: any) => {
-  return dispatch({
-    type: CLEAR_MESSAGE,
-    payload: placeholder
-  })
-}
+export const clearMessage: any = (placeholder: string) => (dispatch: any) => dispatch({
+  type: CLEAR_MESSAGE,
+  payload: placeholder,
+});

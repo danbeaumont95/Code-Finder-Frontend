@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Editor from '@monaco-editor/react';
 
-const FileUploader = ({ onFileLoad }: any) => {
+function FileUploader({ onFileLoad }: any) {
   return <input type="file" onChange={(e: any) => onFileLoad(e.target.files[0])} />;
-};
+}
 
 function FileLoader() {
   const [file, setFile] = useState();

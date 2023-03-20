@@ -18,17 +18,17 @@ export interface PlaceholderLookup {
 }
 
 export interface CodeSnippet {
-  "id": number;
-  "user_id": number;
-  "code": string;
-  "title": string;
-  "language": string;
-  "public": boolean;
+  'id': number;
+  'user_id': number;
+  'code': string;
+  'title': string;
+  'language': string;
+  'public': boolean;
 }
 export interface CodeSnippetToCreate {
-  "user_id": number;
-  "code": string;
-  "title": string;
-  "language": string;
-  "public": boolean;
+  'user_id': number;
+  'code': string;
+  'title': string;
+  'language': string;
+  'public': boolean;
 }

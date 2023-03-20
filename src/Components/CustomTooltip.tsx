@@ -1,11 +1,14 @@
-import '../Styles/CustomTooltip.css'
-import React, { useState } from "react";
+import '../Styles/CustomTooltip.css';
+import React, { useState } from 'react';
 
-const CustomToolip = (props: any) => {
+function CustomToolip(props: any) {
+  const {
+    isError, children, direction, content,
+  } = props;
   const [active, setActive] = useState(false);
 
   const showTip = () => {
-      setActive(true);
+    setActive(true);
   };
 
   const hideTip = () => {
@@ -14,18 +17,18 @@ const CustomToolip = (props: any) => {
 
   return (
     <div
-      className={props.isError ? "Tooltip-Wrapper" : undefined}
+      className={isError ? 'Tooltip-Wrapper' : undefined}
       onMouseEnter={showTip}
       onMouseLeave={hideTip}
     >
-      {props.children}
+      {children}
       {active && (
-        <div className={`Tooltip-Tip ${props.direction || "top"}`}>
-          {props.content}
+        <div className={`Tooltip-Tip ${direction || 'top'}`}>
+          {content}
         </div>
       )}
     </div>
   );
-};
+}
 
 export default CustomToolip;

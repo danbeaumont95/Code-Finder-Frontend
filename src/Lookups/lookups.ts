@@ -1,13 +1,13 @@
-import {UserToSignUp} from '../Components/interfaces'
+import { UserToSignUp } from '../Components/interfaces';
 
 const placeholderLookup: {[key: string]: keyof UserToSignUp} = {
   'First Name': 'first_name',
   'Last Name': 'last_name',
-  'Email': 'email',
-  'Password': 'password'
-}
+  Email: 'email',
+  Password: 'password',
+};
 const Lookups = {
-  placeholderLookup
+  placeholderLookup,
 };
 
 export default Lookups;

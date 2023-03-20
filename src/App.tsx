@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { connect, ConnectedProps } from "react-redux";
-import Main from './Components/Main';
-import Dashboard from './Components/Dashboard';
+import { connect, ConnectedProps } from 'react-redux';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
+import Main from './Components/Main';
+import Dashboard from './Components/Dashboard';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import FullScreenCodeContainer from './Components/FullScreenCodeContainer';
@@ -15,28 +15,38 @@ import LandingPage from './Components/LandingPage';
 import FileLoader from './Components/FileLoader';
 import DifferenceEditor from './Components/DifferenceEditor';
 
+const mapStateToProps = (state: any) => ({
+  current: state.user.currentUser,
+});
+
+const connector = connect(
+  mapStateToProps,
+);
+
 type PropsFromRedux = ConnectedProps<typeof connector>
 interface Props extends PropsFromRedux {
-  current: string;
+  // current: string;
 }
-function nthIndex(str: string, pat: string, n: number){
-  var L= str.length, i= -1;
-  while(n-- && i++<L){
-      i= str.indexOf(pat, i);
-      if (i < 0) break;
+function nthIndex(str: string, pat: string, n: number) {
+  const L = str.length; let
+    i = -1;
+  while (n-- && i++ < L) {
+    i = str.indexOf(pat, i);
+    if (i < 0) break;
   }
   return i;
 }
 
-const currentURL = window.location.href
-const letterAfter = currentURL.substring(nthIndex(currentURL, '/', 4) +1)
+const currentURL = window.location.href;
+const letterAfter = currentURL.substring(nthIndex(currentURL, '/', 4) + 1);
 
 function App(props: Props) {
+  console.log(props, 'app props');
   return (
     <div className="App">
       <Router>
         {localStorage.getItem('accessToken') ? (
-            letterAfter !== '' && letterAfter !== 'http://localhost:3000/' ? (
+          letterAfter !== '' && letterAfter !== 'http://localhost:3000/' ? (
             <NavBar />
           ) : null
         ) : null}
@@ -56,15 +66,5 @@ function App(props: Props) {
     </div>
   );
 }
-
-const mapStateToProps = (state: any) => {
-  return {
-    current: state.user.currentUser
-  };
-};
-
-const connector = connect(
-  mapStateToProps,
-)
 
 export default connector(App);
