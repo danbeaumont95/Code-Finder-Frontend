@@ -1,0 +1,19 @@
+.tab_container {
+  background-color: #1E1E1E;
+}
+
+.tab_container .full_screen_code_container_right_nav_input {
+  border: 2px solid #1E1E1E;
+  background-color: #1E1E1E;
+  border-right: 2px solid #474545;
+  border-bottom: 2px solid #474545;
+  height: 40px;
+  text-indent: 10px;
+}
+
+.tab_container .modal_content_card_language_icon {
+  background-color: #1E1E1E;
+  display: inline-block;
+  height: 100%;
+}
+/*# sourceMappingURL=Tab.css.map */

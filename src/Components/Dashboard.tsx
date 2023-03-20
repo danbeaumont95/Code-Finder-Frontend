@@ -1,15 +1,9 @@
 import React, { useEffect } from 'react';
-// import CodeMirror from '@uiw/react-codemirror';
-// // @ts-ignore 
-// import { javascript } from '@codemirror/lang-javascript';
-// import { EditorView } from 'codemirror';
 import { connect, useDispatch } from "react-redux";
 import { AppDispatch } from '../redux/store';
 import { setCodeSnippets } from '../redux/User/CodeSnippetsActions'
 import { CodeSnippet } from './interfaces';
 import '../Styles/Dashboard.css';
-// import swal from 'sweetalert';
-// import { FaJs, FaPython } from 'react-icons/fa';
 import CreateNewContainer from './CreateNewContainer';
 import CodeContainer from './CodeContainer';
 
@@ -21,7 +15,6 @@ const Dashboard = ( { codeSnippets}: { codeSnippets: CodeSnippet[]; } ) => {
       dispatch(setCodeSnippets(accessToken))
   }, [accessToken, dispatch])
 
- // color: 'rgb(103 160 199)'
   return (
     <div className='dashboard_container'>
       <h1 className='dashboard_title'>Dashboard</h1>

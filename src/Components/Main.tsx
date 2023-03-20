@@ -188,7 +188,6 @@ const Main = (props: Props) => {
               <div className='switch_type_section'>
               <h3 style={{ paddingTop: '20px'}}>Don't have an account? <button className="login_here_button" onClick={() => setType('signup')}>Sign up here</button></h3>
 
-                {/* <button type='submit' className='form_button'>Sign up!</button> */}
                 <button type='submit' className='form_button'>Login!</button>
                 </div>
             </form>

@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setSearchTextAction, setSelectOption } from '../redux/User/SearchActions';
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
+import Searchbar from './Searchbar';
 
 const NavBar = () => {
   const [searchText, setSearchText] = useState('');
@@ -17,14 +18,12 @@ const NavBar = () => {
   
   // Use effect below auto sets redux state
   useEffect(() => {
-    console.log({language, searchText})
     dispatch(setSearchTextAction(searchText))
     dispatch(setSelectOption(language))
   }, [dispatch, searchText, language])
 
   const handleSearchClick = (e: any) => {
     e.preventDefault();
-    // dispatch(setSearchTextAction(searchText))
   }
   
   const handleSearchTextChange = (e: any) => {
@@ -64,11 +63,9 @@ const NavBar = () => {
   }
 
   const handleFocus = () => {
-    console.log('handle focus')
     setShowSelectFocused(true)
   }
   const handleMenuClose = () => {
-    console.log('handleMenuClose')
     setShowSelectFocused(false)
   }
 
@@ -92,7 +89,7 @@ const NavBar = () => {
               {showSelect || showSelectFocused ? (
                 <div className='navbar_select_dropdown'>
 
-                  <Select options={options} styles={colourStyles} onChange={handleCodeLanguageChange} onMenuOpen={handleMouseOver} onFocus={handleFocus} onMenuClose={handleMenuClose}/>
+                  <Searchbar options={options} styles={colourStyles} onChange={handleCodeLanguageChange} onMenuOpen={handleMouseOver} onFocus={handleFocus} onMenuClose={handleMenuClose}/>
                 </div>
 
               ) : null}

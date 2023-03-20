@@ -1,0 +1,12 @@
+.sidebar_settings_container {
+  color: white;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    padding-right: 10px;
+  }
+}

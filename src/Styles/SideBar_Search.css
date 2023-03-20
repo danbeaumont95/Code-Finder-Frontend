@@ -1,0 +1,50 @@
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.wrap .search {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap .searchTerm {
+  width: 100%;
+  border: 3px solid #754484;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.wrap .searchTerm:focus {
+  color: white;
+}
+
+.wrap .searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #6b1586;
+  background: #6b1586;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+/*# sourceMappingURL=SideBar_Search.css.map */

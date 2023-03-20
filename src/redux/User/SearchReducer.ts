@@ -7,7 +7,6 @@ const initialState = {
 
 const reducer = (state = initialState, action: any) => {
   const { type, payload }: {type: any, payload: string} = action;
-  console.log(payload, 'patload')
 
   switch(type) {
     case SET_SEARCH_TEXT:

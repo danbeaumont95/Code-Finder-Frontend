@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import store from './redux/store'
 import { Provider } from 'react-redux';
 import { StyledEngineProvider } from '@mui/material/styles';
+// import 'semantic-ui-css/semantic.min.css'
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

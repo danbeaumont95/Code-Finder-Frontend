@@ -10,6 +10,10 @@ import {
 } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
+import FullScreenCodeContainer from './Components/FullScreenCodeContainer';
+import LandingPage from './Components/LandingPage';
+import FileLoader from './Components/FileLoader';
+import DifferenceEditor from './Components/DifferenceEditor';
 
 type PropsFromRedux = ConnectedProps<typeof connector>
 interface Props extends PropsFromRedux {
@@ -26,20 +30,26 @@ function nthIndex(str: string, pat: string, n: number){
 
 const currentURL = window.location.href
 const letterAfter = currentURL.substring(nthIndex(currentURL, '/', 4) +1)
+
 function App(props: Props) {
   return (
     <div className="App">
       <Router>
         {localStorage.getItem('accessToken') ? (
-            letterAfter !== '' ? (
+            letterAfter !== '' && letterAfter !== 'http://localhost:3000/' ? (
             <NavBar />
           ) : null
         ) : null}
         <Routes>
-          <Route path="/" element={<Main />} />
+          {/* <Route path="/" element={<Main />} /> */}
+          <Route path="/login" element={<Main />} />
           {/* <Route path="/home" element={<Home />} /> */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/code" element={<FullScreenCodeContainer />} />
+          <Route path="/fileloader" element={<FileLoader />} />
+          <Route path="/differenceeditor" element={<DifferenceEditor />} />
+          <Route path="/" element={<LandingPage />} />
         </Routes>
       </Router>
 

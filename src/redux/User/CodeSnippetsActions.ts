@@ -45,16 +45,16 @@ export const saveCodeSnippet = (token: string, code: CodeSnippet) => (dispatch: 
 export const createCodeSnippet = (token: string, code: CodeSnippetToCreate) => (dispatch: AppDispatch, getState: any) => {
   return CodeSnippetsService.createCodeSnippet(token, code)
     .then((response) => {
-      console.log(response, 'response create code snippet')
+
       const state = getState();
-      // console.log(test.codeSnippets.codeSnippets,'test')
+
       const {codeSnippets: {codeSnippets}} = state;
-      console.log(codeSnippets, 'codeSnippets123')
+
       // const newArr = [];
       // newArr.push(codeSnippets)
       // newArr.push(code);
       const returnArr = [...codeSnippets, code];
-      console.log(returnArr, 'returnarr')
+
       dispatch({
         type: SET_CODE_SNIPPETS,
         payload:returnArr

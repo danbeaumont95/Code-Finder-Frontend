@@ -10,6 +10,7 @@ import { connect, useDispatch, ConnectedProps } from "react-redux";
 import { updateCodeSnippet, saveCodeSnippet } from '../redux/User/CodeSnippetsActions'
 import swal from 'sweetalert';
 import '../Styles/CodeContainer.css';
+import NewCodeContainer from './NewCodeContainer';
 
 type PropsFromRedux = ConnectedProps<typeof connector>
 interface Props extends PropsFromRedux {
@@ -26,9 +27,9 @@ const CodeContainer = ({codeSnippets, selectOption, searchText, isDashboard}: Pr
 
     switch(language.toLowerCase()) {
       case 'Javascript'.toLowerCase():
-        return <FaJs style={{ color: '#0E6EAF'}} size={30}/>
+        return <FaJs style={{ color: '#754484'}} size={30}/>
       case 'Python'.toLowerCase():
-        return <FaPython style={{ color: '#0E6EAF'}} size={30}/>
+        return <FaPython style={{ color: '#754484'}} size={30}/>
       default:
         return <h4>Dan</h4>
     }
@@ -100,6 +101,7 @@ const CodeContainer = ({codeSnippets, selectOption, searchText, isDashboard}: Pr
     
   return (
     <div className='code_container_code_snippets_container' >
+      <NewCodeContainer data={formatData(codeSnippets)} codeSnippets={codeSnippets}/>
         {formatData(codeSnippets).map((el) => (
           <div className='code_snippet_container'>
             

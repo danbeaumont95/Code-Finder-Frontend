@@ -19,7 +19,6 @@ const saveCodeSnippet = async (token: string, code: CodeSnippet) => {
 }
 
 const createCodeSnippet = async (token: string, code: CodeSnippetToCreate) => {
-  console.log(code, 'code123')
   const newSnippet = await axios.post('http://127.0.0.1:8000/codefinder/code', code, {
     headers: {
       authorization: `Bearer ${token}`,
